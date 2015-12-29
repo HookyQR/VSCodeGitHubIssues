@@ -1,11 +1,11 @@
 # Git Hub Issues
-[![Build Status](https://api.travis-ci.org/HookyQR/VSGitHubIssues.svg?branch=master)](https://travis-ci.org/HookyQR/VSCodeGitHubIssues)
+[![Build Status](https://api.travis-ci.org/HookyQR/VSCodeGitHubIssues.svg?branch=master)](https://travis-ci.org/HookyQR/VSCodeGitHubIssues)
 
 Monitor Git Hub issues in VS Code while you work.
 
 ![Status Bar](./snap.png)
 
-By defalut, the status is updated every 5 minutes. If an authentication token is included in your settings, this can be reduced to 1 minute. Without one, the minimum is set to 3 minutes.
+By default, the status is updated every 5 minutes. If an authentication token is included in your settings, this can be reduced to 1 minute. Without one, the minimum is set to 3 minutes.
 
 The elements displayed can be set according to the **label**(s) the issue is tagged with in GitHub. Any label can be added to the status bar in the User or Workspace settings.
 
@@ -15,7 +15,7 @@ A seperate indicator is available for **pull requests**. A setting for pull requ
 
 Clicking the status bar element will open a generated page (stored in `.vscode/GitHubIssue`) with the overview elements of the GitHub Issue. Clicking the title of any listed issue will take you to the GitHub site, landing at the issue page.
 
-**Git Hub Issue** identifies your GitHub project via the `.git/config` file. Any config with a https://github.com/:user/:repo(.git) remote url set will be considerd as a GitHub project.
+**Git Hub Issue** identifies your GitHub project via the `.git/config` file. Any config with a https://github.com/:user/:repo(.git) remote url set will be considered as a GitHub project.
 
 It is a good idea to seperate your settings between your user settings and workspace settings. Especially if you're working on large projects. With your user settings describing the assignee filtering, and the workspace settings defining the tags you want to track:
 
@@ -24,7 +24,7 @@ It is a good idea to seperate your settings between your user settings and works
 "GitHubIssues.authToken": "abcde1234567890",
 "GitHubIssues.showLabelAs": {
 	"bug":"bug",
-	"Unlabeled":"info"
+	"Unlabelled":"info"
 },
 "GitHubIssues.assignee": [null,"HookyQR"]
 
