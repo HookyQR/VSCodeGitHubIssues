@@ -103,5 +103,12 @@
 	},
 	"devDependencies": {
 		"vscode": "0.10.x"
+	},
+	"repository": {
+		"type":"git",
+		"url":"https://github.com/HookyQR/VSCodeGitHubIssues"
+	},
+	"bugs":{
+		"url":"https://github.com/HookyQR/VSCodeGitHubIssues/issues"
 	}
 }

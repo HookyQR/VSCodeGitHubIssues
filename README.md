@@ -3,7 +3,7 @@
 
 Monitor Git Hub issues in VS Code while you work.
 
-![Status Bar](./snap.png)
+![Status Bar](image/snap.png)
 
 By default, the status is updated every 5 minutes. If an authentication token is included in your settings, this can be reduced to 1 minute. Without one, the minimum is set to 3 minutes.
 
