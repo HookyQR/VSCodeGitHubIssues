@@ -48,6 +48,10 @@
 				"GitHubIssues.showLabelAs": {
 					"type": "object",
 					"description": "The label you want to track. Set the value of the item to one of the Octicons set (https://octicons.github.com)",
+					"default":{
+						"bug": "bug",
+						"Unlabelled": "info"
+					},
 					"items": {
 						"type": "string",
 						"description": "Icon to display for the label. (Multi use of icons will be collected)",
