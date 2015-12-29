@@ -1,0 +1,103 @@
+{
+	"name": "GitHubIssues",
+	"displayName": "GitHub Issues",
+	"description": "Track Issues in GitHub linked workspaces",
+	"version": "0.0.1",
+	"publisher": "HookyQR",
+	"engines": {
+		"vscode": "^0.10.5"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"icon": "icon.svg",
+	"galleryBanner": {
+		"color": "#e8e030",
+		"theme": "light"
+	},
+	"license": "MIT",
+	"main": "./extension",
+	"contributes": {
+		"commands": [{
+			"command": "HookyQR.GitHubIssues",
+			"title": "Git Hub Issues"
+		}],
+		"configuration": {
+			"type": "object",
+			"title": "Git Hub Issues",
+			"description": "Settings for the Git Hub Issues extension",
+			"properties": {
+				"GitHubIssues.authToken": {
+					"type": "string",
+					"description": "Your personal access token. See 'https://github.com/settings/tokens'"
+				},
+				"GitHubIssues.statusPos": {
+					"type": "string",
+					"enum": ["left", "right"],
+					"default": "left",
+					"description": "Display the Issues track icons on the left or right of the status bar"
+				},
+				"GitHubIssues.countInAllLabels": {
+					"type": "boolean",
+					"default": true,
+					"description": "If more than one tracked label is seen in a single issue, show the value in both."
+				},
+				"GitHubIssues.showLabelAs": {
+					"type": "object",
+					"description": "The label you want to track. Set the value of the item to one of the Octicons set (https://octicons.github.com)",
+					"items": {
+						"type": "string",
+						"description": "Icon to display for the label. (Multi use of icons will be collected)",
+						"enum": ["alert", "arrow-down", "arrow-left", "arrow-right", "arrow-small-down", "arrow-small-left",
+							"arrow-small-right", "arrow-small-up", "arrow-up", "beaker", "bell", "bold", "book", "bookmark", "briefcase",
+							"broadcast", "browser", "bug", "calendar", "check", "checklist", "chevron-down", "chevron-left",
+							"chevron-right", "chevron-up", "circle-slash", "circuit-board", "clippy", "clock", "cloud-download",
+							"cloud-upload", "code", "color-mode", "comment-discussion", "comment", "credit-card", "dash", "dashboard",
+							"database", "desktop-download", "device-camera-video", "device-camera", "device-desktop", "device-mobile",
+							"diff-added", "diff-ignored", "diff-modified", "diff-removed", "diff-renamed", "diff", "ellipsis", "eye",
+							"file-binary", "file-code", "file-directory", "file-media", "file-pdf", "file-submodule",
+							"file-symlink-directory", "file-symlink-file", "file-text", "file-zip", "flame", "fold", "gear", "gift",
+							"gist-secret", "gist", "git-branch", "git-commit", "git-compare", "git-merge", "git-pull-request", "globe",
+							"graph", "heart", "history", "home", "horizontal-rule", "hubot", "inbox", "info", "issue-closed",
+							"issue-opened", "issue-reopened", "italic", "jersey", "key", "keyboard", "law", "light-bulb", "link-external",
+							"link", "list-ordered", "list-unordered", "location", "lock", "logo-gist", "logo-github", "mail-read",
+							"mail-reply", "mail", "mark-github", "markdown", "megaphone", "mention", "milestone", "mirror", "mortar-board",
+							"mute", "no-newline", "octoface", "organization", "package", "paintcan", "pencil", "person", "pin", "plug",
+							"plus", "primitive-dot", "primitive-square", "pulse", "question", "quote", "radio-tower", "repo-clone",
+							"repo-force-push", "repo-forked", "repo-pull", "repo-push", "repo", "rocket", "rss", "ruby", "search", "server",
+							"settings", "shield", "sign-in", "sign-out", "squirrel", "star", "stop", "sync", "tag", "tasklist", "telescope",
+							"terminal", "text-size", "three-bars", "thumbsdown", "thumbsup", "tools", "trashcan", "triangle-down",
+							"triangle-left", "triangle-right", "triangle-up", "unfold", "unmute", "versions", "watch", "x", "zap"]
+					}
+				},
+				"GitHubIssues.showPullRequests": {
+					"type": ["string", "boolean"],
+					"enum": ["all", true, false],
+					"default": true,
+					"description": "'all' shows all open pull requests, true shows those that match label and assignee filters."
+				},
+				"GitHubIssues.assignee": {
+					"type": ["array", "string", "null"],
+					"default": "all",
+					"description": "Filter by assignee. {null} selects Unassigned issues. Use login to include an assignee.",
+					"items": {
+						"type": ["string", "null"],
+						"description": "Filter by assignee. {null} selects Unassigned issues. Use login to include an assignee."
+					}
+				},
+				"GitHubIssues.runEvery": {
+					"type": "integer",
+					"default": 5,
+					"description": "Run every n minutes. Minimum is 3 minutes if no authToken supplied.",
+					"minimum": 1
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"vscode": "0.10.x"
+	}
+}
