@@ -45,3 +45,7 @@ Workspace settings in the assignee element override user settings. Workspace set
 - Improve initial load time (for high issue counts)
 
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
+
+## Changes:
+### 0.0.2: 02 Jan 2015
+* Fix positioning of status element.
