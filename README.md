@@ -13,7 +13,7 @@ Items selected can also be filtered by **assignee**, including unassigned issues
 
 A seperate indicator is available for **pull requests**. A setting for pull requests allows you to see all pull requests, just those that meet other filters, or don't indicate them at all. (They will still show in other Issues if they match the filter. There just won't be a dedicated icon for them.)
 
-Clicking the status bar element will open a generated page (stored in `.vscode/GitHubIssue`) with the overview elements of the GitHub Issue. Clicking the title of any listed issue will take you to the GitHub site, landing at the issue page.
+Clicking the status bar element will open a generated page (stored in `.vscode/GitHubIssue`) with the overview elements of the GitHub Issue. Clicking the title of any listed issue will take you to the GitHub site, landing at the issue page. Updated issues, since you last opened the overview, will be marked with a `*`.
 
 **Git Hub Issue** identifies your GitHub project via the `.git/config` file. Any config with a https://github.com/:user/:repo(.git) remote url set will be considered as a GitHub project.
 
@@ -42,10 +42,15 @@ Workspace settings in the assignee element override user settings. Workspace set
 - Improve overview display.
 - Enable viewing of issue elements in VS Code.
 - Perhaps allow manipulation of issues within VS Code.
-- Improve initial load time (for high issue counts)
+- Improve initial load time.
 
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
 
 ## Changes:
+### 0.0.3: 04 Jan 2015
+* Utilise workspaceState to aviod full read on workspace start. Partially fixes: [Issue #4](https://github.com/HookyQR/VSCodeGitHubIssues/issues/4)
+* Tag items that have updates/new elements. 
+
+
 ### 0.0.2: 02 Jan 2015
 * Fix positioning of status element.
