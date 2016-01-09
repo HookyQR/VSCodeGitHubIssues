@@ -2,7 +2,7 @@
 	"name": "GitHubIssues",
 	"displayName": "GitHub Issues",
 	"description": "Track Issues in GitHub linked workspaces",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "HookyQR",
 	"engines": {
 		"vscode": "^0.10.5"

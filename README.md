@@ -47,8 +47,11 @@ Workspace settings in the assignee element override user settings. Workspace set
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
 
 ## Changes:
+### 0.0.4: 10 Jan 2015
+* Was matching (with empty) when no gitHub repo present.
+
 ### 0.0.3: 04 Jan 2015
-* Utilise workspaceState to aviod full read on workspace start. Partially fixes: [Issue #4](https://github.com/HookyQR/VSCodeGitHubIssues/issues/4)
+* Utilise workspaceState to avoid full read on workspace start. Partially fixes: [Issue #4](https://github.com/HookyQR/VSCodeGitHubIssues/issues/4)
 * Tag items that have updates/new elements. 
 
 
