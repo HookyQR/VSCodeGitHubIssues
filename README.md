@@ -47,6 +47,10 @@ Workspace settings in the assignee element override user settings. Workspace set
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
 
 ## Changes:
+### 0.0.5: 25 Jan 2015
+* Repeat run wasn't working. Function removed by accident in cleanup.
+* Added file rebuild on view if not present.
+
 ### 0.0.4: 10 Jan 2015
 * Was matching (with empty) when no gitHub repo present.
 

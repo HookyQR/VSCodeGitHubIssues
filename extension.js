@@ -9,11 +9,17 @@ function activate(context) {
 	const tempDir = path.join(vscode.workspace.rootPath, ".vscode", "GitHubIssue");
 	let ghi = new GitHubIssue(vscode, context);
 
-	function run() {
+	function run(ctxt) {
 		const tempDir = path.join(vscode.workspace.rootPath, ".vscode", "GitHubIssue");
 		vscode.workspace.openTextDocument(path.join(tempDir, "issueList.md"))
-			.then(doc => vscode.window.showTextDocument(doc, 1));
-		ghi.markViewed();
+			.then(doc => vscode.window.showTextDocument(doc, 1)
+				.then(() => ghi.markViewed()), () => {
+					//re-build file
+					if (ctxt) {
+						return ghi.fillRootMarkdown()
+							.then(run);
+					}
+				});
 	}
 
 	vscode.window.onDidChangeActiveTextEditor(editor => {
@@ -24,7 +30,6 @@ function activate(context) {
 			vscode.commands.executeCommand('workbench.action.markdown.togglePreview');
 		}
 	});
-
 	vscode.commands.registerCommand("HookyQR.GitHubIssues", run);
 	ghi.begin();
 
