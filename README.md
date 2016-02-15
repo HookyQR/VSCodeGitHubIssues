@@ -15,7 +15,7 @@ A seperate indicator is available for **pull requests**. A setting for pull requ
 
 Clicking the status bar element will open a generated page (stored in `.vscode/GitHubIssue`) with the overview elements of the GitHub Issue. Clicking the title of any listed issue will take you to the GitHub site, landing at the issue page. Updated issues, since you last opened the overview, will be marked with a `*`.
 
-**Git Hub Issue** identifies your GitHub project via the `.git/config` file. Any config with a https://github.com/:user/:repo(.git) remote url set will be considered as a GitHub project.
+**Git Hub Issue** identifies your GitHub project via the `.git/config` file. Any config with a `https://github.com/{user}/{repo}(.git)` remote url set will be considered as a GitHub project. Now also accepts SSH URLs of the form `git@github.com:{user}/{repo}(.git)`
 
 It is a good idea to seperate your settings between your user settings and workspace settings. Especially if you're working on large projects. With your user settings describing the assignee filtering, and the workspace settings defining the tags you want to track:
 
@@ -39,6 +39,7 @@ It is a good idea to seperate your settings between your user settings and works
 Workspace settings in the assignee element override user settings. Workspace settings in the showLabelAs element are merged with those in user settings, with workspace settings taking precedence.
 
 ## TODO:
+- Change to using the previewHtml command rather than temp storage in .vscode
 - Improve overview display.
 - Enable viewing of issue elements in VS Code.
 - Perhaps allow manipulation of issues within VS Code.
