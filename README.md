@@ -47,17 +47,20 @@ Workspace settings in the assignee element override user settings. Workspace set
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
 
 ## Changes:
-### 0.0.5: 25 Jan 2015
+### 0.0.5: 16 Feb 2016
+* Support SSH remotes. Fixes: [Issue #5](https://github.com/HookyQR/VSCodeGitHubIssues/issues/5)
+
+### 0.0.5: 25 Jan 2016
 * Repeat run wasn't working. Function removed by accident in cleanup.
 * Added file rebuild on view if not present.
 
-### 0.0.4: 10 Jan 2015
+### 0.0.4: 10 Jan 2016
 * Was matching (with empty) when no gitHub repo present.
 
-### 0.0.3: 04 Jan 2015
+### 0.0.3: 04 Jan 2016
 * Utilise workspaceState to avoid full read on workspace start. Partially fixes: [Issue #4](https://github.com/HookyQR/VSCodeGitHubIssues/issues/4)
 * Tag items that have updates/new elements. 
 
 
-### 0.0.2: 02 Jan 2015
+### 0.0.2: 02 Jan 2016
 * Fix positioning of status element.
