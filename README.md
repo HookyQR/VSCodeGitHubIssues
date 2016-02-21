@@ -39,7 +39,6 @@ It is a good idea to seperate your settings between your user settings and works
 Workspace settings in the assignee element override user settings. Workspace settings in the showLabelAs element are merged with those in user settings, with workspace settings taking precedence.
 
 ## TODO:
-- Change to using the previewHtml command rather than temp storage in .vscode
 - Improve overview display.
 - Enable viewing of issue elements in VS Code.
 - Perhaps allow manipulation of issues within VS Code.
@@ -48,7 +47,11 @@ Workspace settings in the assignee element override user settings. Workspace set
 Please submit an issue if there are any improvements/enhancements you would like to see in future releases. (Or vote up the ones above)
 
 ## Changes:
-### 0.0.5: 16 Feb 2016
+### 0.0.7: 21 Feb 2016
+* Uses `vscode.previewHtml` command instead of saving to `.vscode/GitHubIssues` on vscode 0.10.7+.
+* Still uses old method for pre 0.10.7.
+
+### 0.0.6: 16 Feb 2016
 * Support SSH remotes. Fixes: [Issue #5](https://github.com/HookyQR/VSCodeGitHubIssues/issues/5)
 
 ### 0.0.5: 25 Jan 2016
