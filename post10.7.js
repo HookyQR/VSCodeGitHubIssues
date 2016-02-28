@@ -3,6 +3,8 @@ const vscode = require('vscode');
 const GitHubIssue = require('gitHubIssue');
 
 function activate(context) {
+	if (!vscode.workspace.rootPath) return;
+    
 	const ghi = new GitHubIssue(vscode, context, true);
 	const docProvider = {
 		provideTextDocumentContent: () => ghi.createHTML()
